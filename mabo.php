@@ -12,13 +12,11 @@ require_once("conectar.php");
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-		<title></title>
-        
-		<meta name="keywords" content="" />
+		<title>Indicadores organismos publicos</title>
+        <meta name="keywords" content="" />
 		<meta name="description" content="" />
         <link href="css/default.css" rel="stylesheet" type="text/css" media="all" />
-	    
-       <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1" /> 
+	    <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1" /> 
       
 	</head>
 	
@@ -38,9 +36,8 @@ require_once("conectar.php");
 						<li><a href="mabo.php" title="" class="round active">Pendientes</a></li>
 						<li><a href="produccion5.php" title="" class="round">Producción</a></li>  
 						<li><a href="puntualidad5.php" title="" class="round">Puntualidad</a></li>
-					  <li><a href="eficiencia5.php" title="" class="round">Eficiencia</a></li>
-                     <!--     <li><a href="graficos2.php" title="" class="round">Gestiones</a></li> 
-                        <li><a href="actualizar.php" title="" class="round">Eficiencia</a></li>  -->
+					    <li><a href="eficiencia5.php" title="" class="round">Eficiencia</a></li>
+                     
 					</ul>
                     	
 				</div>
@@ -54,7 +51,7 @@ require_once("conectar.php");
                     
 				<div id="seg"  align="left" style=" width: 600px; height: 2100px;">
 						   <ul>
-                <tr> <td> Proceso: &nbsp;&nbsp;&nbsp;
+                <tr> <td> Proceso: &nbsp;&nbsp;
                            
                            <select size="1"name="mm" id="mm"  style="width:250;height:22 ">
                                                       <option value="Todos">Todos</option>
