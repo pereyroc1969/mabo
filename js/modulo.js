@@ -16,7 +16,7 @@ function camb() {
 var mes=document.getElementById("mes").value;
 var ano=document.getElementById("ano").value;
 
-fetch('http://TE202052A/MABO/myData5.php?mm='+mes+'&yyyy='+ano)
+fetch('../mabo/funcion_php/myData5.php?mm='+mes+'&yyyy='+ano)
 .then(response => response.json())
 .then(data => {
     destroyCharts()
