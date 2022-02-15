@@ -6,7 +6,7 @@ $ano= date("Y");
 $mes= date("m");
 $dia= date("d");
 $des=$dia."-".$mes."-".$ano;
-require_once("conectar.php");
+require_once("funcion_php/conectar.php");
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -100,7 +100,8 @@ require_once("conectar.php");
 			<p>copyright &copy; 2019 . Diseño <a>Octavio Pereyra</a>.</p>
 		</div>
 		
-<script type="text/javascript" src="js/funcion_ini.js" ></script>   		
+		<!-- End Wrapper -->
+<script type="text/javascript" src="js/funcion_ini.js" ></script>  		
 <div style="text-align: center; font-size: 0.75em;"><a ></a>.</div></body>
 	
 </html>

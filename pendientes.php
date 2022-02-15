@@ -1,6 +1,6 @@
 <?php
 header('Content-Type: text/html; charset=iso-8859-1');
-require_once("conectar.php");
+require_once("funcion_php/conectar.php");
 $usuario= strtoupper(trim($_SERVER['REMOTE_USER']));      //tasa\XXXXXXX
 $estruc = split('[\]',$usuario);                                                                   // acá separas dominio de usuario
 $usuario=$estruc[1];
