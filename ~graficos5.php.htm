@@ -1,0 +1,673 @@
+﻿
+Notice: Undefined index: REMOTE_USER in \\TE202052A\MABO\graficos5.php on line 2
+
+Call Stack:
+    0.0250     344288   1. {main}() \\TE202052A\MABO\graficos5.php:0
+
+
+Notice: Undefined offset: 1 in \\TE202052A\MABO\graficos5.php on line 4
+
+Call Stack:
+    0.0250     344288   1. {main}() \\TE202052A\MABO\graficos5.php:0
+
+
+Warning: date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'America/Sao_Paulo' for '-3.0/no DST' instead in \\TE202052A\MABO\graficos5.php on line 5
+
+Call Stack:
+    0.0250     344288   1. {main}() \\TE202052A\MABO\graficos5.php:0
+    0.0253     344696   2. date() \\TE202052A\MABO\graficos5.php:5
+
+
+Warning: date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'America/Sao_Paulo' for '-3.0/no DST' instead in \\TE202052A\MABO\graficos5.php on line 6
+
+Call Stack:
+    0.0250     344288   1. {main}() \\TE202052A\MABO\graficos5.php:0
+    0.0255     345016   2. date() \\TE202052A\MABO\graficos5.php:6
+
+
+Warning: date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'America/Sao_Paulo' for '-3.0/no DST' instead in \\TE202052A\MABO\graficos5.php on line 7
+
+Call Stack:
+    0.0250     344288   1. {main}() \\TE202052A\MABO\graficos5.php:0
+    0.0256     345184   2. date() \\TE202052A\MABO\graficos5.php:7
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title></title>
+        
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<link href="../css/default.css" rel="stylesheet" type="text/css" media="all" />
+         
+       	
+       <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1" /> 
+       
+       
+       <!-- Styles -->
+<style>
+#chartdiv {
+    height: 320px;
+}
+#chartdiv2 {
+    height: 320px;
+}
+#chartdiv3 {
+    height: 320px;
+}
+</style>
+
+<!-- Resources -->
+<script src="//www.amcharts.com/lib/3/amcharts.js"></script>
+<script src="//www.amcharts.com/lib/3/serial.js"></script>
+<link href="//www.amcharts.com/lib/3/plugins/export/export.css" rel="stylesheet" />
+<script src="//www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+<script src="http://www.amcharts.com/lib/3/plugins/dataloader/dataloader.min.js" type="text/javascript"></script>
+
+<!-- Chart code -->
+<script>
+var chart = AmCharts.makeChart("chartdiv", {
+  "type": "serial",
+  "theme": "light",
+  "dataDateFormat": "YYYY-MM-DD",
+  "precision": 0,
+  "valueAxes": [{
+    "id": "v1",
+    "title": "Respuestas",
+    "position": "left",
+    "autoGridCount": false,
+    "labelFunction": function(value) {
+      return "" + Math.round(value) + " Casos";
+    }
+  }, {
+    "id": "v2",
+    "title": "Vuelven",
+    "gridAlpha": 0,
+    "position": "right",
+    "autoGridCount": false
+  }],
+  "graphs": [{
+    "id": "g3",
+    "valueAxis": "v1",
+    "lineColor": "#FF99CC",
+    "fillColors": "#e1ede9",
+    "fillAlphas": 1,
+    "type": "column",
+    "title": "BO",
+    "valueField": "sales2",
+    "clustered": false,
+    "columnWidth": 0.5,
+    "legendValueText": "[[value]] casos",
+    "balloonText": "[[title]] <b style='font-size: 100%'>[[value]] casos</b>"
+  }, {
+    "id": "g4",
+    "valueAxis": "v1",
+    "lineColor": "#62cf73",
+    "fillColors": "#62cf73",
+    "fillAlphas": 1,
+    "type": "column",
+    "title": "MA",
+    "valueField": "sales1",
+    "clustered": false,
+    "columnWidth": 0.3,
+    "legendValueText": "[[value]] casos",
+    "balloonText": "[[title]] <b style='font-size: 100%'>[[value]] casos</b>"
+  }, {
+    "id": "g1",
+    "valueAxis": "v2",
+    "bullet": "round",
+    "bulletBorderAlpha": 1,
+    "bulletColor": "#FFFFFF",
+    "bulletSize": 5,
+    "hideBulletsCount": 50,
+    "lineThickness": 2,
+    "lineColor": "#20acd4",
+    "type": "smoothedLine",
+    "title": "Vuelven MA",
+    "useLineColorForBulletBorder": true,
+    "valueField": "market1",
+    "legendValueText": "[[value]]%",
+    "balloonText": "[[title]] <b style='font-size: 100%'>[[value]]%</b>"
+  }, {
+    "id": "g2",
+    "valueAxis": "v2",
+    "bullet": "round",
+    "bulletBorderAlpha": 1,
+    "bulletColor": "#FFFFFF",
+    "bulletSize": 5,
+    "hideBulletsCount": 50,
+    "lineThickness": 2,
+    "lineColor": "#FF6600",
+    "type": "smoothedLine",
+    "dashLength": 5,
+    "title": "Vuelven BO",
+    "useLineColorForBulletBorder": true,
+    "valueField": "market2",
+    "legendValueText": "[[value]]%",
+    "balloonText": "[[title]] <b style='font-size: 100%'>[[value]]%</b>"
+  }],
+  "chartScrollbar": {
+    "graph": "g1",
+    "oppositeAxis": false,
+    "offset": 30,
+    "scrollbarHeight": 50,
+    "backgroundAlpha": 0,
+    "selectedBackgroundAlpha": 0.1,
+    "selectedBackgroundColor": "#888888",
+    "graphFillAlpha": 0,
+    "graphLineAlpha": 0.5,
+    "selectedGraphFillAlpha": 0,
+    "selectedGraphLineAlpha": 1,
+    "autoGridCount": true,
+    "color": "#AAAAAA"
+  },
+  "chartCursor": {
+    "pan": true,
+    "valueLineEnabled": true,
+    "valueLineBalloonEnabled": true,
+    "cursorAlpha": 0,
+    "valueLineAlpha": 0.2
+  },
+  "categoryField": "date",
+  "categoryAxis": {
+    "parseDates": false,
+    "dashLength": 1,
+    "minorGridEnabled": true
+  },
+  "legend": {
+    "useGraphSettings": true,
+    "position": "top"
+  },
+  "balloon": {
+    "borderThickness": 1,
+    "shadowAlpha": 0
+  },
+  "export": {
+    enabled: true
+  },
+ "dataLoader": {
+   "url": "mydata.php",
+   "format": "json"
+ },
+});
+
+function enterAnnotations() {
+  chart.export.capture({
+    action: "draw"
+  }, function() {
+    var drawingMenu = chart.export.config.menu[0].menu[2].menu;
+    chart.export.createMenu(drawingMenu);
+  })
+}
+
+function setAnnotations() {
+
+  chart.export.setAnnotations({
+    data: [{
+      top: 200,
+      left: 200,
+      text: "Manual inserted annotation",
+      type: "text"
+    }]
+  });
+}
+
+function getAnnotations() {
+
+  window.AmCharts.cachedAnnotations = chart.export.getAnnotations({}, function(items) {
+    alert("Cached " + items.length + " annotations!\nReenter the annotation mode to repply the cached annotations!");
+    console.log("Cached items: ", items);
+  });
+}
+
+function applyAnnotations() {
+  if (!window.AmCharts.cachedAnnotations || !window.AmCharts.cachedAnnotations.length) {
+    alert("No cached annotations available!");
+    return;
+  }
+  chart.export.setAnnotations({
+    data: window.AmCharts.cachedAnnotations
+  });
+}
+</script>
+
+<script>
+var chart = AmCharts.makeChart("chartdiv2", {
+  "type": "serial",
+  "theme": "light",
+  "dataDateFormat": "YYYY-MM-DD",
+  "precision": 0,
+  "valueAxes": [{
+    "id": "v1",
+    "title": "Casos",
+    "position": "left",
+    "autoGridCount": false,
+    "labelFunction": function(value) {
+      return "" + Math.round(value) + " casos";
+    }
+  }, {
+    "id": "v2",
+    "title": "Tiempo",
+    "gridAlpha": 0,
+    "position": "right",
+    "autoGridCount": false
+  }],
+  "graphs": [{
+    "id": "g3",
+    "valueAxis": "v1",
+    "lineColor": "#C0C0C5",
+    "fillColors": "#C0C0C0",
+    "fillAlphas": 1,
+    "type": "column",
+    "title": "Mayor 10D",
+    "valueField": "sales2",
+    "clustered": false,
+    "columnWidth": 0.5,
+    "legendValueText": "[[value]] casos",
+    "balloonText": "[[title]] <b style='font-size: 100%'>[[value]] casos</b>"
+  }, {
+    "id": "g4",
+    "valueAxis": "v1",
+    "lineColor": "#EC13FB",
+    "fillColors": "#FAE1F9",
+    "fillAlphas": 1,
+    "type": "column",
+    "title": "Total casos",
+    "valueField": "sales1",
+    "clustered": false,
+    "columnWidth": 0.3,
+    "legendValueText": "[[value]] casos",
+    "balloonText": "[[title]] <b style='font-size: 100%'>[[value]] casos</b>"
+  }, {
+    "id": "g1",
+    "valueAxis": "v2",
+    "bullet": "round",
+    "bulletBorderAlpha": 1,
+    "bulletColor": "#FFFFFF",
+    "bulletSize": 5,
+    "hideBulletsCount": 50,
+    "lineThickness": 2,
+    "lineColor": "#FF0000",
+    "type": "smoothedLine",
+    "title": "TM",
+    "useLineColorForBulletBorder": true,
+    "valueField": "market1",
+    "legendValueText": "[[value]] días",
+    "balloonText": "[[title]] <b style='font-size: 100%'>[[value]] días</b>"
+  }, {
+    "id": "g2",
+    "valueAxis": "v2",
+    "bullet": "round",
+    "bulletBorderAlpha": 1,
+    "bulletColor": "#FFFFFF",
+    "bulletSize": 5,
+    "hideBulletsCount": 50,
+    "lineThickness": 2,
+    "lineColor": "#000011",
+    "type": "smoothedLine",
+    "dashLength": 5,
+    "title": "TMA",
+    "useLineColorForBulletBorder": true,
+    "valueField": "market2",
+    "legendValueText": "[[value]] días",
+    "balloonText": "[[title]] <b style='font-size: 100%'>[[value]] días</b>"
+  }],
+  "chartScrollbar": {
+    "graph": "g1",
+    "oppositeAxis": false,
+    "offset": 30,
+    "scrollbarHeight": 50,
+    "backgroundAlpha": 0,
+    "selectedBackgroundAlpha": 0.1,
+    "selectedBackgroundColor": "#888888",
+    "graphFillAlpha": 0,
+    "graphLineAlpha": 0.5,
+    "selectedGraphFillAlpha": 0,
+    "selectedGraphLineAlpha": 1,
+    "autoGridCount": true,
+    "color": "#AAAAAA"
+  },
+  "chartCursor": {
+    "pan": true,
+    "valueLineEnabled": true,
+    "valueLineBalloonEnabled": true,
+    "cursorAlpha": 0,
+    "valueLineAlpha": 0.2
+  },
+  "categoryField": "date",
+  "categoryAxis": {
+    "parseDates": false,
+    "dashLength": 1,
+    "minorGridEnabled": true
+  },
+  "legend": {
+    "useGraphSettings": true,
+    "position": "top"
+  },
+  "balloon": {
+    "borderThickness": 1,
+    "shadowAlpha": 0
+  },
+  "export": {
+    enabled: true
+  },
+ "dataLoader": {
+   "url": "mydata2.php?st=mabo",
+   "format": "json"
+ },
+});
+
+function enterAnnotations() {
+  chart.export.capture({
+    action: "draw"
+  }, function() {
+    var drawingMenu = chart.export.config.menu[0].menu[2].menu;
+    chart.export.createMenu(drawingMenu);
+  })
+}
+
+function setAnnotations() {
+
+  chart.export.setAnnotations({
+    data: [{
+      top: 200,
+      left: 200,
+      text: "Manual inserted annotation",
+      type: "text"
+    }]
+  });
+}
+
+function getAnnotations() {
+
+  window.AmCharts.cachedAnnotations = chart.export.getAnnotations({}, function(items) {
+    alert("Cached " + items.length + " annotations!\nReenter the annotation mode to repply the cached annotations!");
+    console.log("Cached items: ", items);
+  });
+}
+
+function applyAnnotations() {
+  if (!window.AmCharts.cachedAnnotations || !window.AmCharts.cachedAnnotations.length) {
+    alert("No cached annotations available!");
+    return;
+  }
+  chart.export.setAnnotations({
+    data: window.AmCharts.cachedAnnotations
+  });
+}
+</script>
+
+
+
+<script>
+var chart = AmCharts.makeChart("chartdiv3", {
+  "type": "serial",
+  "theme": "light",
+  "dataDateFormat": "YYYY-MM-DD",
+  "precision": 0,
+  "valueAxes": [{
+    "id": "v1",
+    "title": "Casos",
+    "position": "left",
+    "autoGridCount": false,
+    "labelFunction": function(value) {
+      return "" + Math.round(value) + " casos";
+    }
+  }, {
+    "id": "v2",
+    "title": "Tiempo",
+    "gridAlpha": 0,
+    "position": "right",
+    "autoGridCount": false
+  }],
+  "graphs": [{
+    "id": "g3",
+    "valueAxis": "v1",
+    "lineColor": "#C0C0C5",
+    "fillColors": "#C0C0C0",
+    "fillAlphas": 1,
+    "type": "column",
+    "title": "Mayor 10D",
+    "valueField": "sales2",
+    "clustered": false,
+    "columnWidth": 0.5,
+    "legendValueText": "[[value]] casos",
+    "balloonText": "[[title]] <b style='font-size: 100%'>[[value]] casos</b>"
+  }, {
+    "id": "g4",
+    "valueAxis": "v1",
+    "lineColor": "#EC13FB",
+    "fillColors": "#FAE1F9",
+    "fillAlphas": 1,
+    "type": "column",
+    "title": "Total casos",
+    "valueField": "sales1",
+    "clustered": false,
+    "columnWidth": 0.3,
+    "legendValueText": "[[value]] casos",
+    "balloonText": "[[title]] <b style='font-size: 100%'>[[value]] casos</b>"
+  }, {
+    "id": "g1",
+    "valueAxis": "v2",
+    "bullet": "round",
+    "bulletBorderAlpha": 1,
+    "bulletColor": "#FFFFFF",
+    "bulletSize": 5,
+    "hideBulletsCount": 50,
+    "lineThickness": 2,
+    "lineColor": "#FF0000",
+    "type": "smoothedLine",
+    "title": "TM",
+    "useLineColorForBulletBorder": true,
+    "valueField": "market1",
+    "legendValueText": "[[value]] días",
+    "balloonText": "[[title]] <b style='font-size: 100%'>[[value]] días</b>"
+  }, {
+    "id": "g2",
+    "valueAxis": "v2",
+    "bullet": "round",
+    "bulletBorderAlpha": 1,
+    "bulletColor": "#FFFFFF",
+    "bulletSize": 5,
+    "hideBulletsCount": 50,
+    "lineThickness": 2,
+    "lineColor": "#000011",
+    "type": "smoothedLine",
+    "dashLength": 5,
+    "title": "TMA",
+    "useLineColorForBulletBorder": true,
+    "valueField": "market2",
+    "legendValueText": "[[value]] días",
+    "balloonText": "[[title]] <b style='font-size: 100%'>[[value]] días</b>"
+  }],
+  "chartScrollbar": {
+    "graph": "g1",
+    "oppositeAxis": false,
+    "offset": 30,
+    "scrollbarHeight": 50,
+    "backgroundAlpha": 0,
+    "selectedBackgroundAlpha": 0.1,
+    "selectedBackgroundColor": "#888888",
+    "graphFillAlpha": 0,
+    "graphLineAlpha": 0.5,
+    "selectedGraphFillAlpha": 0,
+    "selectedGraphLineAlpha": 1,
+    "autoGridCount": true,
+    "color": "#AAAAAA"
+  },
+  "chartCursor": {
+    "pan": true,
+    "valueLineEnabled": true,
+    "valueLineBalloonEnabled": true,
+    "cursorAlpha": 0,
+    "valueLineAlpha": 0.2
+  },
+  "categoryField": "date",
+  "categoryAxis": {
+    "parseDates": false,
+    "dashLength": 1,
+    "minorGridEnabled": true
+  },
+  "legend": {
+    "useGraphSettings": true,
+    "position": "top"
+  },
+  "balloon": {
+    "borderThickness": 1,
+    "shadowAlpha": 0
+  },
+  "export": {
+    enabled: true
+  },
+ "dataLoader": {
+   "url": "mydata2.php?st=bo",
+   "format": "json"
+ },
+});
+
+function enterAnnotations() {
+  chart.export.capture({
+    action: "draw"
+  }, function() {
+    var drawingMenu = chart.export.config.menu[0].menu[2].menu;
+    chart.export.createMenu(drawingMenu);
+  })
+}
+
+function setAnnotations() {
+
+  chart.export.setAnnotations({
+    data: [{
+      top: 200,
+      left: 200,
+      text: "Manual inserted annotation",
+      type: "text"
+    }]
+  });
+}
+
+function getAnnotations() {
+
+  window.AmCharts.cachedAnnotations = chart.export.getAnnotations({}, function(items) {
+    alert("Cached " + items.length + " annotations!\nReenter the annotation mode to repply the cached annotations!");
+    console.log("Cached items: ", items);
+  });
+}
+
+function applyAnnotations() {
+  if (!window.AmCharts.cachedAnnotations || !window.AmCharts.cachedAnnotations.length) {
+    alert("No cached annotations available!");
+    return;
+  }
+  chart.export.setAnnotations({
+    data: window.AmCharts.cachedAnnotations
+  });
+}
+</script>
+
+
+
+
+
+<!-- Chart code -->
+
+<!-- HTML -->
+		
+        
+	</head>
+	
+	<body>
+
+		<div id="wrapper">
+		
+			<div id="logo">
+				<h1><span>MABO</span></h1>
+				<p>Mesa Ágil de Organismos Publicos</p>
+			</div>
+			
+			<div id="page" class="round">
+			
+				<div id="menu" class="round">
+					<ul>
+						
+						<li><a href="mabo.php" title="" class="round ">Bandeja</a></li>
+						<li><a href="graficos5.php" title="" class="round active">Seguimiento</a></li>  
+					<li><a href="kamban.php" title="" class="round ">Kanban</a></li>
+                     <li><a href="graficos2.php" title="" class="round">Analista</a></li> 
+                        <li><a href="actualizar.php" title="" class="round">Actualizar</a></li>
+					</ul>
+                    	
+				</div>
+				
+				<div id="splash">
+					<img src="" alt="" width="960" height="10" class="round" />
+				</div>
+				
+				<div id="wrapper2" class="round">
+				
+					<div id="sidebar" class="round" style="width: 940px; height: 1050px;">
+                    
+					    <h3>   </h3>
+                      <ul></ul>
+                      
+						<h3></h3>
+                        
+                        
+                       
+  Producción - vuelven <br>
+  <div id="chartdiv"></div>
+  Tiempos MABO <br>
+  <div id="chartdiv2"></div>
+  Tiempos BO <br>
+  <div id="chartdiv3"></div>
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+					
+</div>						
+					<!-- End Content -->
+					
+			
+					<div style="clear: both"></div>
+			
+				<!-- End Wrapper 2 -->
+				</div>
+				
+			<!-- End Page -->
+			</div>
+		
+		<!-- End Wrapper -->
+		</div>
+		
+		<div id="footer">
+			<p>copyright &copy; 2018 . Diseño <a>Octavio Pereyra</a>.</p>
+		</div>
+		
+		
+<div style="text-align: center; font-size: 0.75em;"><a ></a>.</div></body>
+	
+</html>
