@@ -62,8 +62,8 @@ $des='01'."-".$mes."-".$ano;
 					<ul>
 						<li><a href="mabo.php" title="" class="round">Pendientes</a></li>
 						<li><a href="produccion5.php" title="" class="round">Producción</a></li>  
-					    <li><a href="puntualidad5.php" title="" class="round active">Puntualidad</a></li>
-                        <li><a href="eficiencia5.php" title="" class="round">Eficiencia</a></li>
+					    <li><a href="puntualidad5.php" title="" class="round ">Puntualidad</a></li>
+                        <li><a href="eficiencia5.php" title="" class="round active">Eficiencia</a></li>
                     <!--      <li><a href="graficos2.php" title="" class="round">Gestiones</a></li> 
                         <li><a href="actualizar.php" title="" class="round">Eficiencia</a></li> -->
                         
@@ -108,7 +108,7 @@ $des='01'."-".$mes."-".$ano;
     <option value="9" <?php if($mes==='9'){echo('selected');}   ?>>septiembre</option>
 	<option value="10" <?php if($mes==='10'){echo('selected');}   ?>>octubre</option>
     <option value="11" <?php if($mes==='11'){echo('selected');}   ?>>noviembre</option>
-    <option value="12" <?php if($mes==='12'){echo('selected');}   ?>>diciembre</option>
+    <option value="12" <?php if($mes==='12'){echo('selected');}   ?> >diciembre</option>
 
 
 
@@ -160,10 +160,10 @@ $des='01'."-".$mes."-".$ano;
         </section>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="js/modulop.js"></script>
+  <script src="js/moduloe.js"></script>
   <script src="js/estilo.js"></script>
   
-
+  
 					
 </div>						
 					<!-- End Content -->

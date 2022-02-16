@@ -1,6 +1,6 @@
 <?php
 header('Content-Type: text/html; charset=iso-8859-1');
-require_once("conectar.php");
+require_once("/conectar.php");
 $base2=montechingolo3();
 $i = 0;
 $j=1;

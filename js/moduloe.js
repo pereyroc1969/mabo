@@ -141,7 +141,7 @@ function renderCharts(datos){
                      
             {
                label: mesas[5],
-               data:vecPunTodos,
+               data:vecEfiTodos,
                backgroundColor: estilos.fondo[0],
                borderColor: estilos.color[0],
             
@@ -149,7 +149,7 @@ function renderCharts(datos){
             },
             {
                 label: mesas[0],
-                data: mabo_1p,
+                data: mabo_1e,
                 backgroundColor: estilos.fondo[1],
                 borderColor: estilos.color[1],
                 
@@ -157,7 +157,7 @@ function renderCharts(datos){
                 },
             {
                 label: mesas[1],
-                data: mabo_2p,
+                data: mabo_2e,
                 backgroundColor: estilos.fondo[2],
                 borderColor: estilos.color[2],
                    
@@ -165,7 +165,7 @@ function renderCharts(datos){
                     },
             {
                 label: mesas[2],
-                data: mabo_3p,
+                data: mabo_3e,
                 backgroundColor: estilos.fondo[4],
                 borderColor: estilos.color[4],
                         
@@ -174,7 +174,7 @@ function renderCharts(datos){
 
            {
                label: mesas[3],
-               data: mabo_4p,
+               data: mabo_4e,
                backgroundColor: estilos.fondo[3],
                borderColor: estilos.color[3],
                                
@@ -233,10 +233,10 @@ for(p=0;p<auxAna.length;p++)
         //alert(auxAna[p]);
         //alert(mesasVec[0]?.puntuales);
         //alert(mesasVec[0]?.cantidad);
-       if(mesasVec[0]?.puntuales!= undefined)  
+       if(mesasVec[0]?.eficiencia!= undefined)  
        {
          cant=parseInt( mesasVec[0].cantidad);
-            puntu=parseInt( mesasVec[0].puntuales);   
+            puntu=parseInt( mesasVec[0].eficiencia);   
             cantAnal=Math.round(10000*puntu/cant)/100;
         vecAna.push(cantAnal);
         }
