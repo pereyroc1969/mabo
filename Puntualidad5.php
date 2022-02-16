@@ -61,11 +61,10 @@ $des='01'."-".$mes."-".$ano;
 				<div id="menu" class="round">
 					<ul>
 						<li><a href="mabo.php" title="" class="round">Pendientes</a></li>
-						<li><a href="produccion5.php" title="" class="round active">Producción</a></li> 
-                        <li><a href="puntualidad5.php" title="" class="round">Puntualidad</a></li> 
+						<li><a href="produccion5.php" title="" class="round">Producción</a></li>  
+					    <li><a href="puntualidad5.php" title="" class="round active">Puntualidad</a></li>
                         <li><a href="eficiencia5.php" title="" class="round">Eficiencia</a></li>
-					 <!--   <li><a href="kamban.php" title="" class="round">Puntualidad</a></li>
-                        <li><a href="graficos2.php" title="" class="round">Gestiones</a></li> 
+                    <!--      <li><a href="graficos2.php" title="" class="round">Gestiones</a></li> 
                         <li><a href="actualizar.php" title="" class="round">Eficiencia</a></li> -->
                         
 					
@@ -111,10 +110,18 @@ $des='01'."-".$mes."-".$ano;
     <option value="11" <?php if($mes==='11'){echo('selected');}   ?>>noviembre</option>
     <option value="12" <?php if($mes==='12'){echo('selected');}   ?>>diciembre</option>
 
+
+
+
+
+
+
+
+
   </select>
 </div>
   
-  <canvas id="miChart" width="800px" height="200px"></canvas>
+  <canvas id="pChart0" width="800px" height="200px"></canvas>
 
   </figure>
   </section>
@@ -124,13 +131,13 @@ $des='01'."-".$mes."-".$ano;
             <figure>
                 
                 <h3>Mesa 1</h3>
-                <canvas id="chart1"></canvas>
+                <canvas id="pChart1"></canvas>
             </figure>
 
             <figure>
                 
                 <h3>Mesa 2</h3>
-                <canvas id="chart2"></canvas>
+                <canvas id="pChart2"></canvas>
             </figure>
         </section>
 
@@ -140,20 +147,21 @@ $des='01'."-".$mes."-".$ano;
             <figure>
                 
                 <h3>Mesa 3</h3>
-                <canvas id="chart3"></canvas>
+                <canvas id="pChart3"></canvas>
             </figure>
 
             <figure>
                
                 <h3>Mesa4</h3>
-                <canvas id="chart4"></canvas>
+                <canvas id="pChart4"></canvas>
             </figure>
 
            
         </section>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="js/modulo.js"></script>
+  <script src="modulop.js"></script>
+  <script src="estilo.js"></script>
   
 
                     
